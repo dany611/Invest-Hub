@@ -64,6 +64,6 @@ Use Node js 16 or higher version
 
 -> both can communicate via chat through socket.io in real time 
 
--> user can logout 
+-> user can logout if needed
 
 
