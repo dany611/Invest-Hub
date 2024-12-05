@@ -13,9 +13,6 @@ cd backend
 ```
 create .env file
 
-```
-```
-
 copy .env.example content to .env file and add following variable 
 
 ```
