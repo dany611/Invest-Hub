@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { findMatchProfiles } from "../api/service.js";
 import ProfileCard from './ProfileCard';
 import NotAvailable from './NotAvailable';
+import socket from '../util/socket';
 
 
 const Dashboard = () => {
@@ -10,6 +11,7 @@ const Dashboard = () => {
     const [fetching, setFetching] = useState(false);
 
     useEffect(() => {
+        
         const fetchMatches = async () => {
             try {
                 setFetching(true)
@@ -22,6 +24,7 @@ const Dashboard = () => {
                 console.error(error);
             }
         };
+        socket.getSocket()
         fetchMatches();
     }, []);
 

@@ -4,7 +4,7 @@ const Chat = require("../models/chat.model");
 exports.findChatEvents = async function (req, res) {
     try {
 
-        const chat = await Chat.findOne({
+        let chat = await Chat.findOne({
             business: req.params.businessId,
             investor: req.params.investorId
         });
@@ -35,7 +35,7 @@ exports.findChatEvents = async function (req, res) {
 exports.createChatEvent = async function (message, senderType, investorId, businessId) {
     try {
 
-        const chat = await Chat.findOne({
+        let chat = await Chat.findOne({
             business: businessId,
             investor: investorId
         });
@@ -45,8 +45,11 @@ exports.createChatEvent = async function (message, senderType, investorId, busin
                 business: businessId,
                 investor: investorId
             })
+            chat = await Chat.findOne({
+                business: req.params.businessId,
+                investor: req.params.investorId
+            });
         }
-
         await ChatEvent.create({
             chat: chat._id,
             senderType,

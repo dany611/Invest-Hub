@@ -20,7 +20,6 @@ const ChatInterface = ({ businessId, investorId, type, title }) => {
         fetchMessages();
 
         return () => {
-            socket.getSocket().disconnect();
         };
     }, [businessId, investorId]);
 
