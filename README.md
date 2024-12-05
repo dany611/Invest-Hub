@@ -46,3 +46,24 @@ npm run start
 
 
 Backend will run on specified port 
+
+Use Node js 16 or higher version
+
+
+# For testing
+
+-> First register as business in one device or browser
+
+-> then register as investor in another device or browser
+
+-> Both need to login after successfull registration
+
+-> On dashboard, business can see matching investor profiles 
+
+-> and similarly investor can see matching business profiles
+
+-> both can communicate via chat through socket.io in real time 
+
+-> user can logout 
+
+
